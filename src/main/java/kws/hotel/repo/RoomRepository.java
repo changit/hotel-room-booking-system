@@ -1,5 +1,7 @@
 package kws.hotel.repo;
 
+import kws.hotel.domain.Room;
+
 /**
  * Created by IntelliJ IDEA.
  * User: uchan
@@ -8,6 +10,7 @@ package kws.hotel.repo;
  * To change this template use File | Settings | File Templates.
  */
 
-public class RoomRepository {
+public interface RoomRepository {
 
+    public Room findById(Long roomNumber);
 }

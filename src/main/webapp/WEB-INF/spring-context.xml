@@ -49,5 +49,6 @@
 
 
     <bean id="reservationRepository"  class="kws.hotel.repo.impl.ReservationRepositoryImpl"/>
+    <bean id="roomRepository"  class="kws.hotel.repo.impl.RoomRepositoryImpl"/>
 
 </beans>

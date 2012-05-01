@@ -1,5 +1,6 @@
 package kws.hotel.repo;
 
+import kws.hotel.domain.Reservation;
 import kws.hotel.domain.Room;
 
 import java.util.Date;
@@ -17,4 +18,5 @@ public interface ReservationRepository {
     List<Room> findAvailableRooms(Date startDate, Date endDate, int start, int batchSize);
 
 
+    void update(Reservation reservation);
 }

@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,12 +24,15 @@ public class Reservation {
     private User user;
 
     @ManyToMany
-    private List<Room> rooms;
+    private Set<Room> rooms;
 
     private BigDecimal totalCost;
     private BigDecimal paidCost;
     private Date startTime;
     private Date endTime;
+    @Enumerated(EnumType.STRING)
+    private ReservationStatus status;
+
 
     public Long getId() {
         return id;
@@ -46,11 +50,11 @@ public class Reservation {
         this.user = user;
     }
 
-    public List<Room> getRooms() {
+    public Set<Room> getRooms() {
         return rooms;
     }
 
-    public void setRooms(List<Room> rooms) {
+    public void setRooms(Set<Room> rooms) {
         this.rooms = rooms;
     }
 
@@ -84,5 +88,13 @@ public class Reservation {
 
     public void setEndTime(Date endTime) {
         this.endTime = endTime;
+    }
+
+    public ReservationStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ReservationStatus status) {
+        this.status = status;
     }
 }

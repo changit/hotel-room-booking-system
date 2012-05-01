@@ -15,8 +15,14 @@
         <appender-ref ref="console"/>
     </logger>
 
+    <logger name="kws" additivity="true">
+        <level value="trace"/>
+        <appender-ref ref="console"/>
+    </logger>
+
 
     <root>
+        <priority value="error"/>
         <appender-ref ref="console"/>
     </root>
 

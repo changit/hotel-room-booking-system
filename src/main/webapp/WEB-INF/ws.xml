@@ -12,12 +12,12 @@
     <import resource="classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
-    <context:component-scan base-package="kws.spring.rest"/>
+    <context:component-scan base-package="kws"/>
 
-    <jaxrs:server id="restContainer" address="/">
-        <jaxrs:serviceBeans>
-            <ref bean="helloService"/>
-        </jaxrs:serviceBeans>
-    </jaxrs:server>
+    <!--<jaxrs:server id="restContainer" address="/">-->
+        <!--<jaxrs:serviceBeans>-->
+
+        <!--</jaxrs:serviceBeans>-->
+    <!--</jaxrs:server>-->
 
 </beans>
